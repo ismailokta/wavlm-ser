@@ -123,6 +123,17 @@ Setiap run menghasilkan di `results/{mean,attention}/{dataset}/`:
 
 ---
 
+## Publikasi
+
+Penelitian ini telah menghasilkan publikasi:
+
+| # | Judul | Jurnal/Prosiding | Status |
+|---|-------|------------------|--------|
+| 1 | *Additive Attention for Cross-Dataset Speech Emotion Recognition Using Pre-Trained Speech Representations and Long Short-Term Memory* | **JUTIF** (Jurnal Teknik Informatika), Vol. 7 No. 6, Des 2026 — SINTA 2, Universitas Jenderal Soedirman | Diterima (LoA: 22 Mei 2026) |
+| 2 | *Speech Emotion Recognition with Multi-Domain Feature Aggregation and Random Forest-Based Selection* | **ICAMIMIA 2025** — IEEE sponsored, ITS Surabaya | Dipresentasikan, IEEE Xplore |
+
+---
+
 ## Referensi Utama
 
 | Paper | Deskripsi |
