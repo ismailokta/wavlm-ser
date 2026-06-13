@@ -10,7 +10,20 @@ Evaluasi kontribusi mekanisme *additive attention* terhadap performa LSTM untuk 
 
 ## Arsitektur Model
 
+### Pipeline Keseluruhan
+
 ![WavLM Frozen Architecture](docs/wavlm-frozen-architecture.png)
+
+### Mekanisme Additive Attention
+
+![Attention Mechanism](docs/attention-mechanism.png)
+
+Additive attention (Bahdanau 2015) bekerja dalam tiga tahap:
+1. **(a) Scoring**: Skor energi `e_t = v^T tanh(W h_t + b)` dihitung untuk setiap hidden state LSTM
+2. **(b) Normalization**: `α_t = softmax(e_t)` menghasilkan bobot atensi yang berjumlah 1
+3. **(c) Aggregation**: Context vector `c = Σ α_t · h_t` sebagai representasi tertimbang seluruh timestep
+
+Parameter **W**, **v**, dan **b** dipelajari selama training dan digunakan bersama (*shared*) untuk seluruh timestep.
 
 Dua model dievaluasi dalam eksperimen ini:
 
