@@ -162,11 +162,13 @@ Folder `thesis-template/` berisi template LaTeX untuk tesis Universitas Dian Nus
 ```
 wavlm-ser/
 ├── experiments/
-│   ├── train_lstm_mean.py         # LSTM + Mean Pooling
-│   ├── train_lstm_attention.py    # LSTM + Additive Attention
-│   ├── utils.py                   # Dataset loading, training loop, utilities
-│   └── presets.json               # Hyperparameter per dataset
-├── datasets/                      # Dataset (download sendiri)
+│   ├── train_lstm_mean.py           # LSTM + Mean Pooling
+│   ├── train_lstm_attention.py      # LSTM + Additive Attention
+│   ├── utils.py                     # Dataset loading, training loop, utilities
+│   ├── presets.json                 # Hyperparameter per dataset
+│   └── cache/                       # Waveform cache (TESS)
+├── datasets/                        # Dataset (download sendiri)
+│   ├── README.md                    # Petunjuk struktur dataset
 │   ├── ravdess/
 │   ├── emodb/
 │   ├── savee/
@@ -174,13 +176,25 @@ wavlm-ser/
 │   ├── crema_d/
 │   └── emovo/
 ├── results/
-│   ├── mean/                      # Output LSTM + Mean
-│   └── attention/                 # Output LSTM + Attention
+│   ├── mean/                        # Output LSTM + Mean Pooling
+│   │   ├── ravdess/
+│   │   ├── emodb/
+│   │   └── ...                      # (6 dataset × confusion matrix, curves, metrics)
+│   └── attention/                   # Output LSTM + Attention
+│       └── ...
 ├── docs/
 │   ├── wavlm-frozen-architecture.drawio
-│   └── wavlm-frozen-architecture.png
-├── thesis-template/               # Template LaTeX Tesis Udinus
+│   ├── wavlm-frozen-architecture.png
+│   └── attention-mechanism.png
+├── thesis-template/                 # Template LaTeX Tesis Udinus
+│   ├── thesis.tex
+│   ├── settings/
+│   ├── frontmatter/
+│   ├── chapters/
+│   ├── appendices/
+│   └── references/
 ├── Makefile
+├── LICENSE
 └── README.md
 ```
 
