@@ -148,7 +148,7 @@ Penelitian ini telah menghasilkan publikasi:
 
 Folder `thesis-template/` berisi template LaTeX untuk tesis Universitas Dian Nuswantoro (UDINUS) Semarang. Template ini mengikuti **Lampiran 16 Panduan Tesis Udinus** dengan fitur:
 
-- **Struktur lengkap**: Halaman sampul, pernyataan, persetujuan, pengesahan, abstrak (EN/ID), acknowledgements, TOC, daftar tabel/gambar/algoritma, 5 bab, daftar pustaka, lampiran
+- **Struktur lengkap**: Halaman sampul, judul, pengesahan status, pernyataan, persetujuan, pengesahan, abstrak (EN/ID), acknowledgements, daftar publikasi, TOC, daftar tabel/gambar/algoritma, 5 bab, daftar pustaka, lampiran
 - **Format sesuai panduan**: Margin 4-3-3-3 cm, spasi 1.5, Times New Roman 12pt, penomoran BAB romawi
 - **Dukungan TikZ/PGFPlots**: Gambar teknik dan grafik dalam dokumen
 - **Algorithm2e**: Pseudocode terformat
@@ -196,12 +196,15 @@ wavlm-ser/
 │   │   └── numbering.tex             # Penomoran list
 │   ├── frontmatter/                  # Halaman depan
 │   │   ├── titlepage.tex             # Halaman sampul
+│   │   ├── title_inner.tex           # Halaman judul
+│   │   ├── approval_status.tex       # Pengesahan status tesis
 │   │   ├── statement.tex             # Pernyataan penulis
 │   │   ├── approval.tex              # Persetujuan tesis
 │   │   ├── approval_pengesahan.tex   # Pengesahan tesis
 │   │   ├── abstract_en.tex           # Abstract (English)
 │   │   ├── abstract_id.tex           # Abstrak (Indonesia)
 │   │   ├── acknowledgements.tex      # Ucapan terima kasih
+│   │   ├── daftar_publikasi.tex      # Daftar publikasi
 │   │   ├── list_of_appendices.tex    # Daftar lampiran
 │   │   └── list_of_terms.tex         # Daftar istilah
 │   ├── chapters/                     # Bab-bab tesis
@@ -214,7 +217,8 @@ wavlm-ser/
 │   │   ├── references.tex            # Bibliography style
 │   │   └── references.bib            # File BibTeX
 │   ├── appendices/                   # Lampiran
-│   │   └── turnitin.tex              # Contoh lampiran
+│   │   ├── turnitin.tex              # Contoh lampiran turnitin
+│   │   └── loa_publikasi.tex         # Contoh lampiran LOA
 │   └── assets/                       # Aset (gambar, logo)
 │       └── logos/
 │           └── logo_udinus.png
