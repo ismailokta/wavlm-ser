@@ -1,0 +1,69 @@
+% ============================================================================
+%                         CORE PACKAGES & FONTS
+% ============================================================================
+\usepackage{iftex}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage[indonesian,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\ifPDFTeX
+  % pdfTeX fallback fonts
+  \usepackage{newtxtext,newtxmath}
+\else
+  % Use system fonts when compiling with XeLaTeX/LuaLaTeX
+  \usepackage{fontspec}
+  \setmainfont{Times New Roman}[
+    Path=,
+    Ligatures=TeX,
+  ]
+  \setsansfont{Arial}
+  \setmonofont{Courier New}
+\fi
+
+% ============================================================================
+%                         FIGURES, TABLES & CAPTIONS
+% ============================================================================
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% ============================================================================
+%                         MATH, LISTS & UTILITIES
+% ============================================================================
+\usepackage{tocloft}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+\usepackage{titlesec}
+
+% ============================================================================
+%                         DIAGRAMS & PLOTS
+% ============================================================================
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,shapes.arrows,shadows,calc,fit}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pdfpages}
+
+% ============================================================================
+%                         CODE & ALGORITMA
+% ============================================================================
+\usepackage{listings}
+\usepackage[ruled,vlined,linesnumbered,resetcount]{algorithm2e}
+
+% ============================================================================
+%                         HEADERS & REFERENCES
+% ============================================================================
+\usepackage{fancyhdr}
+\usepackage[numbers,sort]{natbib}
+\usepackage[hidelinks]{hyperref}

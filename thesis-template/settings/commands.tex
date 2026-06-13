@@ -1,0 +1,96 @@
+% ============================================================================
+%                         LANGUAGE & LOCALIZATION
+% ============================================================================
+\selectlanguage{indonesian}
+
+% Rename floats to Indonesian
+\addto\captionsindonesian{\renewcommand{\figurename}{Gambar}}
+\addto\captionsindonesian{\renewcommand{\tablename}{Tabel}}
+\addto\captionsenglish{\renewcommand{\figurename}{Gambar}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tabel}}
+
+% Judul daftar-daftar (uppercase)
+\addto\captionsindonesian{\renewcommand{\contentsname}{DAFTAR ISI}}
+\addto\captionsindonesian{\renewcommand{\listfigurename}{DAFTAR GAMBAR}}
+\addto\captionsindonesian{\renewcommand{\listtablename}{DAFTAR TABEL}}
+\addto\captionsenglish{\renewcommand{\contentsname}{DAFTAR ISI}}
+\addto\captionsenglish{\renewcommand{\listfigurename}{DAFTAR GAMBAR}}
+\addto\captionsenglish{\renewcommand{\listtablename}{DAFTAR TABEL}}
+
+% Chapter and appendix names
+\addto\captionsindonesian{%
+  \renewcommand{\chaptername}{BAB}%
+  \renewcommand{\appendixname}{LAMPIRAN}%
+  \renewcommand{\bibname}{DAFTAR PUSTAKA}%
+}
+\addto\captionsenglish{%
+  \renewcommand{\chaptername}{BAB}%
+  \renewcommand{\appendixname}{LAMPIRAN}%
+  \renewcommand{\bibname}{DAFTAR PUSTAKA}%
+}
+
+% ============================================================================
+%                         CUSTOM ENVIRONMENTS
+% ============================================================================
+% Indonesian abstract environment
+\newenvironment{abstrak}{\par\noindent\textbf{Abstrak}\\}{\par}
+
+% ============================================================================
+%                         TIKZ FLOWCHART STYLES
+% ============================================================================
+\tikzset{
+  fc/block/.style    = {rectangle, draw, rounded corners, align=center, minimum height=2.5em, minimum width=8em},
+  fc/decision/.style = {diamond, draw, aspect=2, align=center, inner sep=1pt},
+  fc/io/.style       = {trapezium, trapezium left angle=70, trapezium right angle=110, draw, align=center},
+  fc/arrow/.style    = {-{Latex[length=3mm]}, line width=0.6pt}
+}
+
+% ============================================================================
+%                         MODEL NAMING CONVENTIONS
+% ============================================================================
+\newcommand{\baseline}{baseline}
+\newcommand{\Baseline}{Baseline}
+\newcommand{\proposed}{usulan}
+\newcommand{\Proposed}{Usulan}
+\newcommand{\frozen}{\textit{frozen}}
+\newcommand{\unfreeze}{\textit{unfreeze}}
+\newcommand{\unfrozen}{\textit{unfrozen}}
+
+% ============================================================================
+%                         GRAPHICS PATH MANAGEMENT
+% ============================================================================
+% Default graphic paths
+\graphicspath{{assets/figures/common/}{assets/logos/}}
+
+% Helper to set per-chapter figure folder
+\newcommand{\setchaptergraphics}[1]{%
+  \graphicspath{{assets/figures/#1/}{assets/figures/common/}{assets/logos/}}%
+}
+
+% ============================================================================
+%                         CODE LISTINGS (Python)
+% ============================================================================
+\lstdefinestyle{pythonstyle}{
+  language=Python,
+  basicstyle=\footnotesize\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=lines,
+  rulecolor=\color{black},
+  tabsize=2,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=false,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  escapeinside={\%*}{*)},
+  morekeywords={*,True,False,None}
+}
+\lstset{style=pythonstyle}

@@ -1,0 +1,9 @@
+class,precision,recall,f1_score,support
+angry,0.8966,1.0,0.9455,26
+disgust,1.0,0.8889,0.9412,9
+fear,1.0,1.0,1.0,14
+happy,1.0,0.7857,0.88,14
+neutral,0.9697,1.0,0.9846,32
+sad,1.0,1.0,1.0,12
+macro_avg,0.9777,0.9458,0.9585,107
+weighted_avg,0.9658,0.9626,0.9615,107

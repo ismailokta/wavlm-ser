@@ -1,0 +1,29 @@
+% Halaman Sampul Tesis (Lampiran 6 - Panduan UDINUS)
+\newgeometry{left=4cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\thispagestyle{empty}
+\begin{center}
+\addcontentsline{toc}{chapter}{HALAMAN SAMPUL}
+\vspace*{0pt}
+{\bfseries\MakeUppercase{\ThesisType}}\\[1.0cm]
+{\bfseries\MakeUppercase{\TitleID}}\\[1.0cm]
+
+Oleh:\\[0.4cm]
+{\bfseries\MakeUppercase{\AuthorName}}\\[0.2cm]
+{\bfseries \StudentID}\\[1.0cm]
+
+{\bfseries Tesis diajukan sebagai salah satu syarat\\
+untuk memperoleh gelar\\
+\DegreeName}\\[1.0cm]
+
+% Logo universitas (diameter ~4cm)
+\IfFileExists{\UniversityLogo}{\includegraphics[width=4cm]{\UniversityLogo}\\[1.0cm]}{\fbox{\parbox[c][4cm][c]{4cm}{\centering LOGO}}\\[1.0cm]}
+
+\vfill
+{\bfseries\MakeUppercase{\ProgramName}}\\
+{\bfseries\MakeUppercase{\FacultyName}}\\
+{\bfseries\MakeUppercase{\UniversityName}}\\
+{\MakeUppercase{\City}}\\
+{\Year}
+\end{center}
+\clearpage
+\restoregeometry

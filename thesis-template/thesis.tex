@@ -1,0 +1,72 @@
+% Main entry for Udinus thesis/proposal template
+\documentclass[12pt,a4paper,oneside]{book}
+
+% Settings split into modular includes
+\input{settings/packages}
+\input{settings/metadata}
+\input{settings/commands}
+\input{settings/formatting}
+\input{settings/numbering}
+
+\begin{document}
+
+% Front matter with roman page numbering (urutan sesuai Lampiran 16 UDINUS)
+\frontmatter
+\input{frontmatter/titlepage}            % Halaman Sampul
+\clearpage
+\input{frontmatter/title_inner}          % Halaman Judul
+\clearpage
+\input{frontmatter/approval_status}      % Pengesahan Status Tesis
+\clearpage
+\input{frontmatter/statement}            % Pernyataan Penulis
+\clearpage
+\input{frontmatter/approval}             % Persetujuan Tesis
+\clearpage
+\input{frontmatter/approval_pengesahan}  % Pengesahan Tesis
+\clearpage
+\input{frontmatter/abstract_en}          % Abstract (English)
+\clearpage
+\input{frontmatter/abstract_id}          % Abstrak (Indonesian)
+\clearpage
+\input{frontmatter/acknowledgements}     % Acknowledgments
+\clearpage
+\input{frontmatter/daftar_publikasi}    % Daftar Publikasi
+\clearpage
+\tableofcontents
+\clearpage
+\setChapterTocPrefix{BAB}
+% Daftar Tabel dan Daftar Gambar ditampilkan dan juga masuk TOC
+\addcontentsline{toc}{chapter}{DAFTAR TABEL}
+\listoftables
+\clearpage
+\addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
+\listoffigures
+\clearpage
+\addcontentsline{toc}{chapter}{DAFTAR ALGORITMA}
+\listofalgorithms
+\clearpage
+% Placeholder opsional: Daftar Lampiran dan Daftar Istilah (kosong bila belum ada)
+\input{frontmatter/list_of_appendices}
+\clearpage
+\input{frontmatter/list_of_terms}
+\clearpage
+
+% Main matter with arabic numbering
+\mainmatter
+\input{chapters/bab1}
+\input{chapters/bab2}
+\input{chapters/bab3}
+\input{chapters/bab4}
+\input{chapters/bab5}
+
+% References
+\clearpage
+\input{references/references}
+
+% Lampiran
+\clearpage
+\appendix
+\input{appendices/loa_publikasi}
+% \input{appendices/turnitin}
+
+\end{document}

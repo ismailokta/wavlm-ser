@@ -1,0 +1,243 @@
+% ============================================================================
+%                         PAGE LAYOUT & GEOMETRY
+% ============================================================================
+% Geometry and layout per Udinus guide (BAB IV 4.2)
+\geometry{
+  a4paper,
+  left=4cm,
+  right=2.5cm,
+  top=3cm,
+  bottom=3cm,
+  headheight=15pt,
+  headsep=0.8cm,
+  footskip=1.5cm
+}
+
+% Posisi nomor halaman sesuai diagram bidang pengetikan:
+% - Header (kanan-atas) pada 1.5 cm dari tepi atas
+% - Footer (halaman bab, tengah-bawah) pada 1.5 cm dari tepi bawah
+% Dalam LaTeX, headsep adalah jarak header ke bidang teks, sedangkan footskip
+% adalah jarak bidang teks ke footer. Keduanya diatur melalui geometry agar
+% top/bottom tetap menjadi batas bidang pengetikan 3 cm sesuai panduan.
+
+% ============================================================================
+%                         TYPOGRAPHY & SPACING
+% ============================================================================
+% Line spacing: panduan Udinus BAB IV 4.2(k) mengatur seluruh isi tesis
+% menggunakan spasi 1.5. Pengecualian berlaku untuk judul/keterangan gambar,
+% tabel, grafik, dan lampiran yang boleh dibuat lebih rapat sesuai kebutuhan.
+\onehalfspacing % Mengatur spasi isi utama menjadi 1.5 sesuai panduan tesis Udinus.
+
+% Paragraph layout: paragraf lanjutan diberi indentasi, sementara paragraf
+% pertama setelah heading dibiarkan mulai dari batas kiri bidang pengetikan.
+% Tidak ada parskip tambahan agar jarak antarparagraf tetap mengikuti spasi 1.5,
+% bukan menjadi renggang seperti gaya dokumen modern.
+\setlength{\parindent}{24pt} % Indentasi paragraf lanjutan; kira-kira setara 4 karakter pada ukuran 12pt.
+\setlength{\parskip}{0pt} % Tidak menambah jarak ekstra antarparagraf; jarak cukup mengikuti spasi 1.5.
+
+
+% ============================================================================
+%                         CHAPTER & SECTION HEADINGS
+% ============================================================================
+% Chapter/section formatting and spacing rules
+
+% Chapter title: uppercase, centered at top of text area; roman numeral label
+% Judul bab ala Udinus: baris 1 = "BAB ROMAWI", baris 2 = judul (uppercase)
+\newcommand{\udinusChapterPrefix}{BAB}
+\newcommand{\udinusChapterLabel}{\Roman{chapter}}
+\titleformat{\chapter}[display]
+  {\bfseries\filcenter}
+  {\MakeUppercase{\udinusChapterPrefix\ \udinusChapterLabel}}
+  {0pt}
+  {\bfseries\MakeUppercase}
+
+% Chapter spacing: judul bab ditempatkan dekat batas atas bidang pengetikan
+% seperti contoh panduan. Jarak setelah judul bab dibuat setara 1.5 baris;
+% panduan Word menyebut 3 baris, tetapi nilai literal tersebut terlalu renggang
+% dalam LaTeX karena tinggi baris dan mekanisme heading berbeda.
+% Format: \titlespacing*{command}{left}{before-sep}{after-sep}
+\titlespacing*{\chapter}{0pt}{-1.5cm}{1.5\baselineskip} % {kiri}{sebelum}{sesudah}: judul bab dinaikkan mendekati margin atas, lalu diberi jarak 1.5 baris ke teks.
+
+% Section and subsection: left aligned, Title Case by user; spacing adjusted for thesis readability
+% Format: \titlespacing*{command}{left}{before-sep}{after-sep}
+% Panduan Udinus berbasis Word menyebut 2 baris antara teks dan subjudul,
+% serta antara subjudul dan teks berikutnya. Di LaTeX, 2\baselineskip literal
+% terlihat terlalu renggang dan boros halaman, sehingga digunakan adaptasi yang
+% tetap akademik: 1.5 baris sebelum heading dan 0.75 baris setelah heading.
+\titlespacing*{\section}{0pt}{0.75\baselineskip}{0.45\baselineskip} % Section utama: 1.5 baris dari teks sebelumnya, 0.75 baris ke teks berikutnya.
+\titlespacing*{\subsection}{0pt}{0.75\baselineskip}{0.45\baselineskip} % Subsection: spacing disamakan agar hierarki konsisten dan tidak terlihat menempel.
+\titlespacing*{\subsubsection}{0pt}{0.75\baselineskip}{0.45\baselineskip} % Subsubsection: cukup lega untuk judul kecil seperti kategori dataset, tetapi tetap hemat halaman.
+
+% Set heading sizes: BAB (chapter) and sub-bab use 12pt bold (no oversized sections)
+\titleformat{\section}{\bfseries\normalsize}{\thesection}{0.8em}{} % Section dicetak tebal ukuran normal 12pt; jarak nomor ke judul 0.8em.
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{0.8em}{} % Subsection mengikuti ukuran section agar tidak terlalu besar untuk format tesis.
+% Subsubsection: format huruf (a), (b), (c) — lazim PTS Indonesia level ke-4
+\setcounter{secnumdepth}{3} % Menampilkan penomoran sampai level subsubsection.
+\renewcommand{\thesubsubsection}{\alph{subsubsection}} % Mengubah nomor subsubsection menjadi huruf: a, b, c, dst.
+\titleformat{\subsubsection}{\bfseries\normalsize}{(\thesubsubsection)}{0.8em}{} % Subsubsection tampil sebagai (a), (b), (c) dengan teks tebal ukuran normal.
+
+% ============================================================================
+%                         HEADER & FOOTER
+% ============================================================================
+% Headers/footers: page number at top-right; chapter-opening pages show number at bottom-center
+\pagestyle{fancy}
+\fancyhf{}
+% Header kanan default: hanya nomor halaman
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Redefine plain page style (used by chapter openings)
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ============================================================================
+%                         DAFTAR ISI/TABEL/GAMBAR (TOC/LOT/LOF)
+% ============================================================================
+% Khusus untuk halaman Daftar Isi: judul dibuat rata tengah sesuai permintaan,
+% sementara label "Halaman" tetap rata kanan seperti sebelumnya.
+% Trik rata tengah judul menggunakan \hfill di sebelum dan sesudah judul
+% (yang kedua disisipkan melalui \cftaftertoctitle di bawah).
+% Gunakan font judul standar tanpa pemaksaan perataan di sini;
+% perataan akan diatur lewat \cftmaketoctitle yang kita custom.
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\normalsize}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\normalsize}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\normalsize}
+% Tambahkan \hfill sebelum \par untuk menutup pasangan \hfill di depan judul
+% sehingga judul "DAFTAR ISI" menjadi benar-benar di tengah.
+% Baris "Halaman" tetap rata kanan.
+% Seimbangkan \hfill untuk judul DAFTAR GAMBAR dan DAFTAR TABEL
+\renewcommand{\cftafterloftitle}{\hfill\mbox{}\par\noindent\hfill\normalfont\normalsize Halaman\par\vspace{-0.2\baselineskip}}
+\renewcommand{\cftafterlottitle}{\hfill\mbox{}\par\noindent\hfill\normalfont\normalsize Halaman\par\vspace{-0.2\baselineskip}}
+% Jarak vertikal sebelum judul daftar disamakan dengan \chapter* agar posisi y
+% judul DAFTAR ISI, DAFTAR GAMBAR, dan DAFTAR TABEL sejajar dengan BAB dan
+% DAFTAR ISTILAH. Nilai -1.5 cm mengikuti \titlespacing*{\chapter} di atas.
+\renewcommand{\cftbeforetoctitleskip}{-1.5cm}
+\renewcommand{\cftaftertoctitleskip}{1\baselineskip}
+\renewcommand{\cftbeforeloftitleskip}{-1.5cm}
+\renewcommand{\cftafterloftitleskip}{1\baselineskip}
+\renewcommand{\cftbeforelottitleskip}{-1.5cm}
+\renewcommand{\cftafterlottitleskip}{1\baselineskip}
+% Padatkan jeda antar entri pada daftar isi/daftar gambar/daftar tabel
+\setlength{\cftbeforechapskip}{0pt}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforefigskip}{0pt}
+\setlength{\cftbeforetabskip}{0pt}
+% Pusatkan judul DAFTAR ISI tanpa mengubah mekanisme internal tocloft.
+% Trik: \cfttoctitlefont diawali \hfill dan ditutup \hfill\mbox{} di awal
+% \cftaftertoctitle agar judul benar-benar di tengah. Setelah itu, cetak
+% label "Halaman" tetap rata kanan.
+\renewcommand{\cftaftertoctitle}{\hfill\mbox{}\par\noindent\hfill\normalfont\normalsize Halaman\par\vspace{-0.2\baselineskip}}
+\let\udinusOrigTableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{%
+  {\begingroup
+   \setstretch{1.25}%
+   \udinusOrigTableofcontents
+  \endgroup}}
+\let\udinusOrigListoffigures\listoffigures
+\renewcommand{\listoffigures}{%
+  {\begingroup
+   \setstretch{1.25}%
+   \udinusOrigListoffigures
+  \endgroup}}
+\let\udinusOrigListoftables\listoftables
+\renewcommand{\listoftables}{%
+  {\begingroup
+   \setstretch{1.25}%
+   \udinusOrigListoftables
+  \endgroup}}
+\makeatletter
+\renewcommand{\listofalgorithms}{%
+  {\begingroup
+   \setstretch{1.25}%
+   \ifx\algocf@seclistalgo\chapter
+     \if@twocolumn\@restonecoltrue\onecolumn\else\@restonecolfalse\fi
+   \fi
+   \algocf@seclistalgo*{\listalgorithmcfname}%
+   \@mkboth{\MakeUppercase\listalgorithmcfname}{\MakeUppercase\listalgorithmcfname}%
+   \par\noindent\hfill\normalfont\normalsize Halaman\par\vspace{-0.2\baselineskip}%
+   \@starttoc{loa}%
+   \ifx\algocf@seclistalgo\chapter
+     \if@restonecol\twocolumn\fi
+   \fi
+  \endgroup}}
+
+
+% Daftar Isi dan judul bab: pengaturan prefiks "BAB" atau "LAMPIRAN"
+\renewcommand{\udinusChapterPrefix}{BAB}% Teks prefiks pada judul bab
+\renewcommand{\udinusChapterLabel}{\Roman{chapter}}% Format nomor bab di judul
+\newcommand{\@chapapp@toc}{BAB}% Prefiks di daftar isi
+\newcommand{\udinus@setchaptertocprefix}[1]{\gdef\@chapapp@toc{#1}}
+\let\udinus@orig@appendix\appendix
+\renewcommand{\appendix}{%
+  \udinus@orig@appendix
+  \gdef\udinusChapterPrefix{LAMPIRAN}%
+  \gdef\udinusChapterLabel{\Alph{chapter}}%
+  \udinus@setchaptertocprefix{LAMPIRAN}%
+  \addtocontents{toc}{\protect\udinus@setchaptertocprefix{LAMPIRAN}}%
+  \addtocontents{toc}{\protect\setlength{\cftchapnumwidth}{7.5em}}% Perlebar kolom nomor untuk LAMPIRAN
+}
+\renewcommand{\cftchappresnum}{\@chapapp@toc\ }
+
+% Command wrapper tanpa @ untuk digunakan di dokumen utama
+\newcommand{\setChapterTocPrefix}[1]{\udinus@setchaptertocprefix{#1}}
+\makeatother
+\renewcommand{\cftchapaftersnum}{\enspace}% spasi setelah nomor bab (lebih rapat)
+% Lebar kolom nomor bab di TOC agar judul lebih dekat tanpa menabrak nomor
+\setlength{\cftchapnumwidth}{3.8em}
+% Pastikan entri bab tidak diindent berbeda dari entri bagian
+\setlength{\cftchapindent}{0pt}
+
+% ============================================================================
+%                         CAPTIONS & FLOATS
+% ============================================================================
+% Captions: Table caption above (default), Figure caption below (default); adjust label names done in commands.tex
+\captionsetup{font=normalsize}
+
+% Global float spacing guide: tweak these lengths to control gap between figures/tables and surrounding text.
+% Float placement specifiers for e.g. \begin{figure}[tbp]:
+% t = place at top of page
+% b = place at bottom of page
+% h = try placing near the "here" location in source
+% p = allow placement on a float-only page
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{12pt plus 2pt minus 2pt}
+
+% Force floats on float-only pages to start at the top (not centered vertically).
+% Default LaTeX centers floats on \floatpage; these settings push them to the top.
+\makeatletter
+\setlength{\@fptop}{0pt}           % No extra glue at top of float page
+\setlength{\@fpsep}{8pt plus 1fil} % Space between floats on a float page
+\setlength{\@fpbot}{0pt plus 1fil} % Minimal glue at bottom
+\makeatother
+
+% Relax float placement limits so [t] figures are more likely to be placed at top.
+\renewcommand{\topfraction}{0.9}      % Up to 90% of a text page can be floats at top
+\renewcommand{\textfraction}{0.1}     % At least 10% of page must be text
+\renewcommand{\floatpagefraction}{0.8} % A float page must be at least 80% full
+
+% ============================================================================
+%                         PSEUDOCODE/ALGORITMA (Algorithm2e)
+% ============================================================================
+\SetKwInput{KwInput}{Input}
+\SetKwInput{KwOutput}{Output}
+\SetKw{KwAnd}{and}
+\SetKw{KwOr}{or}
+\SetAlgoCaptionSeparator{.}
+\SetAlgoNlRelativeSize{-1}
+\SetAlFnt{\small}
+\SetKwComment{Comment}{$\triangleright$ }{}
+\SetAlgoSkip{bigskip} % Tambahan jarak vertikal sebelum/sesudah algoritma
+
+% Penomoran algoritme per bab: x.y (IEEE style)
+\renewcommand{\thealgocf}{\arabic{chapter}.\arabic{algocf}}
+\makeatletter
+\@addtoreset{algocf}{chapter}
+\makeatother
+
+% Nama float - Gaya Indonesia
+\SetAlgorithmName{Algoritma}{Algoritma}{DAFTAR ALGORITMA}

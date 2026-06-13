@@ -1,0 +1,87 @@
+% ============================================================================
+% FUNDAMENTAL REFERENCES — Thesis Core Papers
+% ============================================================================
+% Ganti dengan referensi Anda sendiri. Yang di bawah adalah contoh untuk
+% makalah fundamental yang mendasari tesis Speech Emotion Recognition
+% dengan LSTM + Additive Attention + WavLM.
+
+@article{bahdanau2015neural,
+    author    = {Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
+    title     = {Neural Machine Translation by Jointly Learning to Align and Translate},
+    journal   = {arXiv preprint arXiv:1409.0473},
+    year      = {2015},
+    note      = {ICLR 2015. Paper fundamental yang memperkenalkan additive attention (Bahdanau attention).},
+}
+
+@article{chen2022wavlm,
+    author    = {Chen, Sanyuan and Wang, Chengyi and Chen, Zhengyang and Wu, Yu and Liu, Shujie and Chen, Zhuo and Li, Jinyu and Kanda, Naoyuki and Yoshioka, Takuya and Xiao, Xiong and others},
+    title     = {WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing},
+    journal   = {IEEE Journal of Selected Topics in Signal Processing},
+    year      = {2022},
+    volume    = {16},
+    number    = {6},
+    pages     = {1505--1518},
+    note      = {Encoder pra-latih untuk representasi ucapan. Model WavLM-Large digunakan sebagai feature extractor frozen dalam tesis.},
+}
+
+@inproceedings{mirsamadi2017automatic,
+    author    = {Mirsamadi, Seyedmahdad and Barsoum, Emad and Zhang, Cha},
+    title     = {Automatic Speech Emotion Recognition Using Recurrent Neural Networks with Local Attention},
+    booktitle = {2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+    year      = {2017},
+    pages     = {2227--2231},
+    note      = {Penerapan awal mekanisme atensi pada LSTM untuk Speech Emotion Recognition.},
+}
+
+% ============================================================================
+% DATASET REFERENCES — 6 Datasets
+% ============================================================================
+
+@article{livingstone2010ravdess,
+    author    = {Livingstone, Steven R and Russo, Frank A},
+    title     = {The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A Dynamic, Multimodal Set of Facial and Vocal Expressions in North American English},
+    journal   = {PLoS ONE},
+    year      = {2018},
+    volume    = {13},
+    number    = {5},
+    pages     = {e0196391},
+}
+
+@phdthesis{burkhardt2005emodb,
+    author    = {Burkhardt, Felix and Paeschke, Astrid and Rolfes, Miriam and Sendlmeier, Walter F and Weiss, Benjamin},
+    title     = {A Database of German Emotional Speech},
+    school    = {Interspeech 2005},
+    year      = {2005},
+}
+
+@article{jackson2014savee,
+    author    = {Jackson, Philip and Haq, Sana Ul},
+    title     = {Surrey Audio-Visual Expressed Emotion (SAVEE) Database},
+    journal   = {University of Surrey},
+    year      = {2014},
+}
+
+@inproceedings{dupuis2018tess,
+    author    = {Dupuis, Kate and Pichora-Fuller, M Kathleen},
+    title     = {Toronto Emotional Speech Set (TESS)},
+    booktitle = {University of Toronto},
+    year      = {2018},
+}
+
+@inproceedings{cao2014crema,
+    author    = {Cao, Houwei and Cooper, David G and Keutmann, Michael K and Gur, Ruben C and Nenkova, Ani and Verma, Ragini},
+    title     = {CREMA-D: Crowd-Sourced Emotional Multimodal Actors Dataset},
+    booktitle = {IEEE Transactions on Affective Computing},
+    year      = {2014},
+    volume    = {5},
+    number    = {4},
+    pages     = {377--390},
+}
+
+@inproceedings{costantini2014emovo,
+    author    = {Costantini, Giovanni and Iadarola, Iacopo and Paoloni, Andrea and Todisco, Massimiliano},
+    title     = {EMOVO Corpus: An Italian Emotional Speech Database},
+    booktitle = {International Conference on Language Resources and Evaluation (LREC)},
+    year      = {2014},
+    pages     = {3501--3504},
+}

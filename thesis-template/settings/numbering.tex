@@ -1,0 +1,31 @@
+% ============================================================================
+%                         ENUMERATE (NUMBERED LISTS)
+% ============================================================================
+% Global configuration for numbered lists
+% Format: Level 1 -> 1., Level 2 -> a., Level 3 -> (1)
+\setlist[enumerate]{
+    label*=\arabic*. ,
+    noitemsep,
+    topsep=0.5\baselineskip,
+    leftmargin=*
+}
+
+% Level-specific rules
+\setlist[enumerate,1]{label=\arabic*. }   % Level 1: 1., 2., 3.
+\setlist[enumerate,2]{label=\alph*. }     % Level 2: a., b., c.
+\setlist[enumerate,3]{label=(\arabic*)}   % Level 3: (1), (2), (3)
+
+% ============================================================================
+%                         ITEMIZE (BULLETED LISTS)
+% ============================================================================
+% Global configuration for bulleted lists
+% Format: Level 1 -> •, Level 2 -> –, Level 3 -> *
+\setlist[itemize]{
+    noitemsep,
+    topsep=0.5\baselineskip,
+    leftmargin=1.5em
+}
+
+\setlist[itemize,1]{label=\textbullet}    % Level 1: •
+\setlist[itemize,2]{label=--}             % Level 2: – (en-dash)
+\setlist[itemize,3]{label=*}              % Level 3: *

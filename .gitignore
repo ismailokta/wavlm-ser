@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Models
+*.pth
+
+# Cache (keep .gitkeep, ignore tensor files)
+experiments/cache/tess/*
+!experiments/cache/tess/.gitkeep
+
+# Datasets (ignore downloaded audio, keep .gitkeep)
+datasets/*/*
+!datasets/*/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
