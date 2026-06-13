@@ -186,42 +186,7 @@ wavlm-ser/
 │   ├── wavlm-frozen-architecture.drawio
 │   ├── wavlm-frozen-architecture.png
 │   └── attention-mechanism.png
-├── thesis-template/                 # Template LaTeX Tesis Udinus
-│   ├── thesis.tex                    # File utama
-│   ├── settings/                     # Konfigurasi LaTeX
-│   │   ├── packages.tex              # Daftar paket
-│   │   ├── metadata.tex              # Metadata (judul, nama, pembimbing)
-│   │   ├── commands.tex              # Custom commands
-│   │   ├── formatting.tex            # Format halaman, heading, dll
-│   │   └── numbering.tex             # Penomoran list
-│   ├── frontmatter/                  # Halaman depan
-│   │   ├── titlepage.tex             # Halaman sampul
-│   │   ├── title_inner.tex           # Halaman judul
-│   │   ├── approval_status.tex       # Pengesahan status tesis
-│   │   ├── statement.tex             # Pernyataan penulis
-│   │   ├── approval.tex              # Persetujuan tesis
-│   │   ├── approval_pengesahan.tex   # Pengesahan tesis
-│   │   ├── abstract_en.tex           # Abstract (English)
-│   │   ├── abstract_id.tex           # Abstrak (Indonesia)
-│   │   ├── acknowledgements.tex      # Ucapan terima kasih
-│   │   ├── daftar_publikasi.tex      # Daftar publikasi
-│   │   ├── list_of_appendices.tex    # Daftar lampiran
-│   │   └── list_of_terms.tex         # Daftar istilah
-│   ├── chapters/                     # Bab-bab tesis
-│   │   ├── bab1.tex                  # Pendahuluan
-│   │   ├── bab2.tex                  # Tinjauan pustaka
-│   │   ├── bab3.tex                  # Metodologi
-│   │   ├── bab4.tex                  # Hasil dan pembahasan
-│   │   └── bab5.tex                  # Kesimpulan dan saran
-│   ├── references/                   # Referensi
-│   │   ├── references.tex            # Bibliography style
-│   │   └── references.bib            # File BibTeX
-│   ├── appendices/                   # Lampiran
-│   │   ├── turnitin.tex              # Contoh lampiran turnitin
-│   │   └── loa_publikasi.tex         # Contoh lampiran LOA
-│   └── assets/                       # Aset (gambar, logo)
-│       └── logos/
-│           └── logo_udinus.png
+├── thesis-template/                 # Template LaTeX Tesis Udinus (lihat README di dalamnya)
 ├── Makefile
 ├── LICENSE
 └── README.md
