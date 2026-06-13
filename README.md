@@ -56,11 +56,11 @@ Kedua model menggunakan **WavLM-Large** sebagai encoder yang dibekukan (*frozen*
 | Dataset   | LSTM + Mean (Acc / F1) | LSTM + Attention (Acc / F1) |
 | --------- | ---------------------- | --------------------------- |
 | RAVDESS   | 92.01% / 0.9206        | 92.71% / 0.9268             |
-| EmoDB     | 93.91% / 0.9358        | 96.09% / 0.9588             |
-| SAVEE     | 83.33% / 0.8400        | 88.10% / 0.8788             |
-| TESS      | 98.93% / 0.9893        | 99.64% / 0.9964             |
-| CREMA-D   | 92.48% / 0.9244        | 92.92% / 0.9290             |
-| EMOVO     | 86.57% / 0.8649        | 87.31% / 0.8731             |
+| EmoDB     | 96.26% / 0.9615        | 98.13% / 0.9817             |
+| SAVEE     | 93.75% / 0.9365        | 95.83% / 0.9582             |
+| TESS      | 100.00% / 1.0000       | 100.00% / 1.0000            |
+| CREMA-D   | 76.70% / 0.7630        | 78.44% / 0.7854             |
+| EMOVO     | 78.81% / 0.7854        | 79.66% / 0.7914             |
 
 Detail lengkap, confusion matrix, dan per-class metrics tersedia di folder `results/`.
 
