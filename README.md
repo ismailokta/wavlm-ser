@@ -134,6 +134,18 @@ Penelitian ini telah menghasilkan publikasi:
 
 ---
 
+## Future Work
+
+- **Multi-head attention**: Mengeksplorasi multi-head additive attention untuk menangkap beberapa aspek temporal secara paralel
+- **Fine-tuning WavLM**: Membuka sebagian layer WavLM untuk adaptasi domain spesifik emosi
+- **Self-attention / Transformer**: Mengganti LSTM dengan Transformer encoder untuk perbandingan arsitektur
+- **Cross-corpus generalization**: Evaluasi train-test lintas dataset (misal train EmoDB, test RAVDESS)
+- **Data augmentation**: Pitch shifting, time stretching, noise injection untuk dataset kecil
+- **Multimodal fusion**: Mengintegrasikan fitur teks (transkrip) atau visual (ekspresi wajah)
+- **Explainability**: Visualisasi bobot atensi untuk interpretasi segmen emosional dalam ucapan
+
+---
+
 ## Referensi Utama
 
 | Paper | Deskripsi |
