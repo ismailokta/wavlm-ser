@@ -448,5 +448,4 @@ Template ini dibuat untuk keperluan akademik di Universitas Dian Nuswantoro.
 ## Bantuan
 
 Untuk bantuan lebih lanjut, hubungi:
-- Email: [email departemen]
-- Website: https://fti.dinus.ac.id
+- Email: p31202402617@mhs.dinus.ac.id
