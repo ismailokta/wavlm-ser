@@ -27,3 +27,26 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+
+# LaTeX compile output (keep PDF)
+thesis-template/*.aux
+thesis-template/*.bbl
+thesis-template/*.blg
+thesis-template/*.fdb_latexmk
+thesis-template/*.fls
+thesis-template/*.loa
+thesis-template/*.lof
+thesis-template/*.log
+thesis-template/*.lot
+thesis-template/*.out
+thesis-template/*.toc
+thesis-template/*.synctex.gz
+thesis-template/*.idx
+thesis-template/*.ind
+thesis-template/*.ilg
+thesis-template/*.nav
+thesis-template/*.snm
+thesis-template/*.vrb
+thesis-template/*.bcf
+thesis-template/*.run.xml
+!thesis-template/*.pdf

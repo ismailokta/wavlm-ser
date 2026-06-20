@@ -1,39 +1,39 @@
 % Pernyataan Penulis (Lampiran 10 - Panduan UDINUS)
-\thispagestyle{empty}
+\thispagestyle{plain}
 \begin{center}
 \addcontentsline{toc}{chapter}{PERNYATAAN PENULIS}
 % Logo di atas
-\IfFileExists{\UniversityLogo}{\includegraphics[width=2.8cm]{\UniversityLogo}\\[0.6cm]}{\relax}
-{\bfseries \UniversityName}\\[1.0cm]
-{\bfseries\large PERNYATAAN PENULIS}\\[1.0cm]
+\IfFileExists{\UniversityLogo}{\includegraphics[width=2.8cm]{\UniversityLogo}\\[0.4cm]}{\relax}
+{\bfseries \UniversityName}\\[0.6cm]
+{\bfseries\large PERNYATAAN PENULIS}\\[0.6cm]
 
-\begin{tabular}{@{}l@{\hspace{0.5cm}}c@{\hspace{0.5cm}}p{10cm}@{}}
-JUDUL TESIS & : & {\bfseries \TitleID} \\[0.3cm]
-PENYUSUN    & : & \AuthorName \\[0.3cm]
+\begin{tabular}{@{}p{2.8cm}@{}p{0.6cm}@{}p{\dimexpr\textwidth-3.4cm\relax}@{}}
+JUDUL TESIS & : & {\bfseries \TitleID} \\[0.2cm]
+PENYUSUN    & : & \AuthorNameTitleCase \\[0.2cm]
 NPM         & : & \StudentID \\
 \end{tabular}
 \end{center}
 
-\vspace{1.0cm}
+\vspace{0.55cm}
 
 \noindent
 ``Saya menyatakan dan bertanggung jawab dengan sebenarnya bahwa Tesis ini
-adalah hasil karya saya sendiri kecuali cuplikan dan ringkasan yang masing-masing
-telah saya jelaskan sumbernya. Jika pada waktu selanjutnya ada pihak
+adalah hasil karya saya sendiri kecuali cuplikan dan ringkasan yang masing-
+masing telah saya jelaskan sumbernya. Jika pada waktu selanjutnya ada pihak
 lain yang mengklaim bahwa Tesis ini sebagai karyanya, yang disertai dengan
-bukti-bukti yang cukup, maka saya bersedia untuk dibatalkan gelar \DegreeName{}
-saya beserta segala hak dan kewajiban yang melekat pada gelar
+bukti-bukti yang cukup, maka saya bersedia untuk dibatalkan gelar
+\DegreeName{} saya beserta segala hak dan kewajiban yang melekat pada gelar
 tersebut''.
 
 \vspace{2.0cm}
 
-\begin{flushright}
-{\ApprovalPlace},\quad\ApprovalDate\\[1.5cm]
+\begin{center}
+{\ApprovalPlace},\quad\RatificationDate\\[0.75cm]
 
-\rule{3cm}{0.4pt}\\[0.2cm]
-{\footnotesize meterai}\\[1.5cm]
+\fbox{\rule{0pt}{1.6cm}\rule{1.5cm}{0pt}}\\[-0.05cm]
+meterai\\[0.75cm]
 
-\underline{\AuthorName}\\
+\underline{\AuthorNameTitleCase}\\
 Penulis
-\end{flushright}
+\end{center}
 \clearpage

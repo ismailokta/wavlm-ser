@@ -1,5 +1,5 @@
 % Pengesahan Tesis (Lampiran 12 - Panduan UDINUS)
-\thispagestyle{empty}
+\thispagestyle{plain}
 \begin{center}
 \addcontentsline{toc}{chapter}{PENGESAHAN TESIS}
 % Logo di atas
@@ -9,8 +9,8 @@
 
 \begin{tabular}{@{}l@{\hspace{0.5cm}}c@{\hspace{0.5cm}}p{10cm}@{}}
 JUDUL & : & {\bfseries \TitleID} \\[0.2cm]
-NAMA  & : & \AuthorName \\[0.2cm]
-NPM   & : & \StudentID \\
+NAMA  & : & \AuthorNameTitleCase \\[0.2cm]
+NIM   & : & \StudentID \\
 \end{tabular}
 
 \vspace{0.5cm}
@@ -20,22 +20,25 @@ Menurut pandangan kami, Tesis ini
 memadai dari segi kualitas untuk tujuan penganugerahan gelar
 {\DegreeName} (M.Kom.)\\[0.5cm]
 
-{\ApprovalPlace},\quad\ApprovalDate\\[0.5cm]
+{\ApprovalPlace},\quad\RatificationDate\\[1.5cm]
 
-Dewan Penguji:\\[1.2cm]
+Dewan Penguji:\\[1.4cm]
 
-\begin{tabular}{p{5.5cm} p{1cm} p{5.5cm}}
-    \multicolumn{1}{c}{\rule{5.5cm}{0.4pt}} & & \multicolumn{1}{c}{\rule{5.5cm}{0.4pt}} \\
-    \multicolumn{1}{c}{\ExaminerA} & & \multicolumn{1}{c}{\ExaminerB} \\
-    \multicolumn{1}{c}{Anggota} & & \multicolumn{1}{c}{Anggota} \\[1.2cm]
-\end{tabular}
+\begin{tabular*}{0.86\textwidth}{@{\extracolsep{\fill}}cc@{}}
+    % Lebar garis tanda tangan diatur oleh \rule{5.5cm}{0.4pt}.
+    % Ubah 5.5cm untuk memperpanjang/memendekkan garis.
+    \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} & \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} \\
+    \makebox[5.5cm][c]{\ExaminerA} & \makebox[5.5cm][c]{\ExaminerB} \\
+    \makebox[5.5cm][c]{Anggota} & \makebox[5.5cm][c]{Anggota} \\[1.2cm]
+\end{tabular*}
 
-Mengetahui\\[1.2cm]
-
-\begin{tabular}{p{5.5cm} p{1cm} p{5.5cm}}
-    \multicolumn{1}{c}{\rule{5.5cm}{0.4pt}} & & \multicolumn{1}{c}{\rule{5.5cm}{0.4pt}} \\
-    \multicolumn{1}{c}{\DeanName} & & \multicolumn{1}{c}{\ChiefExaminer} \\
-    \multicolumn{1}{c}{Dekan} & & \multicolumn{1}{c}{Ketua Penguji} \\
-\end{tabular}
+\begin{tabular*}{0.86\textwidth}{@{\extracolsep{\fill}}cc@{}}
+    % "Mengetahui" ditempatkan di kolom kiri (di atas Dekan) sesuai contoh
+    % Lampiran 12 panduan UDINUS, bukan di tengah halaman.
+    \makebox[5.5cm][c]{Mengetahui} & \\[1.4cm]
+    \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} & \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} \\
+    \makebox[5.5cm][c]{\DeanName} & \makebox[5.5cm][c]{\ChiefExaminer} \\
+    \makebox[5.5cm][c]{Dekan} & \makebox[5.5cm][c]{Ketua Penguji} \\
+\end{tabular*}
 \end{center}
 \clearpage

@@ -3,12 +3,16 @@
 \thispagestyle{empty}
 \begin{center}
 \addcontentsline{toc}{chapter}{HALAMAN SAMPUL}
-\vspace*{0pt}
-{\bfseries\MakeUppercase{\ThesisType}}\\[1.0cm]
-{\bfseries\MakeUppercase{\TitleID}}\\[1.0cm]
+% Jarak vertikal dari margin atas ke blok judul.
+% Ubah 1.5cm untuk menggeser seluruh konten ke atas (nilai lebih kecil) atau ke bawah (nilai lebih besar).
+\vspace*{0.5cm}
+{\large\bfseries\MakeUppercase{\ThesisType}}\\[1.0cm]
+% Ukuran font judul dan program studi mengikuti default dokumen (12pt).
+% Tambahkan perintah ukuran seperti \Large atau \large di sini jika ingin mengubahnya.
+{\large\bfseries\MakeUppercase{\TitleID}}\\[1.0cm]
 
 Oleh:\\[0.4cm]
-{\bfseries\MakeUppercase{\AuthorName}}\\[0.2cm]
+{\bfseries\MakeUppercase{\AuthorName}}\\[0.1cm]
 {\bfseries \StudentID}\\[1.0cm]
 
 {\bfseries Tesis diajukan sebagai salah satu syarat\\
@@ -19,11 +23,12 @@ untuk memperoleh gelar\\
 \IfFileExists{\UniversityLogo}{\includegraphics[width=4cm]{\UniversityLogo}\\[1.0cm]}{\fbox{\parbox[c][4cm][c]{4cm}{\centering LOGO}}\\[1.0cm]}
 
 \vfill
-{\bfseries\MakeUppercase{\ProgramName}}\\
-{\bfseries\MakeUppercase{\FacultyName}}\\
-{\bfseries\MakeUppercase{\UniversityName}}\\
-{\MakeUppercase{\City}}\\
-{\Year}
+% Nama program studi, fakultas, dan universitas (ukuran default 12pt).
+{\large\bfseries\MakeUppercase{\ProgramName}}\\
+{\large\bfseries\MakeUppercase{\FacultyName}}\\
+{\large\bfseries\MakeUppercase{\UniversityName}}\\
+{\large\bfseries\MakeUppercase{\City}}\\
+{\large\bfseries\Year}
 \end{center}
 \clearpage
 \restoregeometry
