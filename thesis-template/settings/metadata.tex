@@ -24,6 +24,12 @@
 \newcommand{\SupervisorA}{Dr. Nama Pembimbing Utama, M.Kom.}
 \newcommand{\SupervisorB}{Nama Pembimbing Pembantu, S.Si, M.Kom}
 
+% Lebar garis tanda tangan pembimbing (masing-masing bisa berbeda)
+\newcommand{\SupervisorALine}{5.5cm}
+\newcommand{\SupervisorBLine}{5.5cm}
+% Lebar garis tanda tangan penulis
+\newcommand{\AuthorLine}{4.0cm}
+
 % ============================================================================
 %                         EXAMINERS (Dewan Penguji)
 % ============================================================================
@@ -31,6 +37,39 @@
 \newcommand{\ExaminerB}{...............................}       % Anggota 2
 \newcommand{\DeanName}{...............................}        % Dekan
 \newcommand{\ChiefExaminer}{...............................}   % Ketua Penguji
+
+% Lebar garis tanda tangan (masing-masing bisa berbeda)
+\newcommand{\ExaminerALine}{3.4cm}
+\newcommand{\ExaminerBLine}{4.9cm}
+\newcommand{\DeanLine}{3.4cm}
+\newcommand{\ChiefExaminerLine}{6.2cm}
+
+% ============================================================================
+%                       JARAK VERTIKAL TANDA TANGAN
+% ============================================================================
+%   Nama       ↕ \LineToNameGap   (negatif = menempel ke nama)
+%   ───────    ↕ \LineToLabelGap  (negatif = menempel ke garis)
+%   Keterangan
+%
+% Naik/turunkan tiap elemen: \NameRaise, \LineRaise, \LabelRaise (+ naik, − turun)
+% ====================================================================
+\newcommand{\LineToNameGap}{-0.5cm}  % garis ↔ nama (negatif = menempel, 0 = normal)
+\newcommand{\LineToNameGapStatus}{-0.3cm}  % khusus Status Tesis (tabular arraystretch beda)
+\newcommand{\LineToLabelGap}{-0.2cm}     % garis ↔ keterangan (0 = menempel, + = jauh)
+\newcommand{\NameRaise}{0pt}         % naik (+) / turun (−) nama
+\newcommand{\LineRaise}{0pt}         % naik (+) / turun (−) garis
+\newcommand{\LabelRaise}{0pt}        % naik (+) / turun (−) keterangan
+
+% ============================================================================
+%                       JARAK HORIZONTAL & LEBAR KOLOM
+% ============================================================================
+% Jarak antar kolom kiri ↔ kanan (Anggota 1 ↔ Anggota 2, Dekan ↔ Ketua Penguji).
+\newcommand{\SignatureColumnGap}{2cm}
+
+% Lebar kolom dihitung otomatis: (textwidth - gap) / 2.
+% Total = textwidth → kedua kolom SELALU simetris terhadap bidang tulis,
+% berapapun nilai \SignatureColumnGap. TIDAK perlu diubah manual.
+\newcommand{\SignatureColWidth}{\dimexpr(\textwidth-\SignatureColumnGap)/2\relax}
 
 % ============================================================================
 %                         DATES & PLACES

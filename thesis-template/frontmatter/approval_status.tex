@@ -51,24 +51,16 @@ Saya & : & {\AuthorNameTitleCase} \\
 
 \vspace{1.5cm}
 
-\begin{tabular}{@{}p{7.0cm}p{7.0cm}@{}}
- & \multicolumn{1}{c}{Disahkan oleh:} \\[1.5cm]
-\multicolumn{1}{c}{\rule{5.6cm}{0.4pt}} & \multicolumn{1}{c}{\rule{5.6cm}{0.4pt}} \\
-\multicolumn{1}{c}{\AuthorNameTitleCase} & \multicolumn{1}{c}{\SupervisorA} \\
-\end{tabular}
-
-\vspace{0.8cm}
-
 \noindent
-\begin{tabular}{@{}p{2.8cm}@{}p{0.6cm}@{}p{\dimexpr\textwidth-3.4cm\relax}@{}}
-Alamat Tetap & : & \dotfill \\
-\end{tabular}
-
-\vspace{0.3cm}
-
-\noindent
-\begin{tabular}{@{}p{2.8cm}@{}p{0.6cm}@{}p{\dimexpr\textwidth-3.4cm\relax}@{}}
-Tanggal & : & \RatificationDate \\
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\SignatureColWidth}@{\hspace{\SignatureColumnGap}}p{\SignatureColWidth}@{}}
+% Nama penulis dan pembimbing. Jarak nama ↔ garis: \LineToNameGapStatus (metadata.tex).
+\multicolumn{1}{c}{\raisebox{\NameRaise}{\AuthorNameTitleCase}} & \multicolumn{1}{c}{\raisebox{\NameRaise}{\SupervisorA}} \\[\LineToNameGapStatus]
+% Garis bawah nama. Lebar: \AuthorLine & \SupervisorALine. Jarak garis ↔ berikutnya: \LineToLabelGap.
+\multicolumn{1}{c}{\raisebox{\LineRaise}{\rule{\AuthorLine}{0.4pt}}} & \multicolumn{1}{c}{\raisebox{\LineRaise}{\rule{\SupervisorALine}{0.4pt}}} \\[\LineToLabelGap]
+\vspace{0.5cm}
+Alamat Tetap: & \\
+Jalan ..., RT/RW, Kelurahan, Kecamatan, Kota & \\[1.5cm]
+Tanggal : \RatificationDate & \multicolumn{1}{c}{Tanggal : \RatificationDate} \\
 \end{tabular}
 
 \endgroup

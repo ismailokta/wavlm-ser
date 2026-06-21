@@ -22,23 +22,25 @@ memadai dari segi kualitas untuk tujuan penganugerahan gelar
 
 {\ApprovalPlace},\quad\RatificationDate\\[1.5cm]
 
-Dewan Penguji:\\[1.4cm]
+Dewan Penguji:\\[2.0cm]
 
-\begin{tabular*}{0.86\textwidth}{@{\extracolsep{\fill}}cc@{}}
-    % Lebar garis tanda tangan diatur oleh \rule{5.5cm}{0.4pt}.
-    % Ubah 5.5cm untuk memperpanjang/memendekkan garis.
-    \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} & \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} \\
-    \makebox[5.5cm][c]{\ExaminerA} & \makebox[5.5cm][c]{\ExaminerB} \\
-    \makebox[5.5cm][c]{Anggota} & \makebox[5.5cm][c]{Anggota} \\[1.2cm]
-\end{tabular*}
+\begin{tabular}{@{}c@{\hspace{\SignatureColumnGap}}c@{}}
+    % Lebar kolom (\SignatureColWidth) sama untuk kiri & kanan → simetris.
+    % Lebar garis (\ExaminerALine, dll) bisa beda, tetap centered di kolom.
+    % Jarak antar kolom diatur oleh \SignatureColumnGap (metadata.tex).
+    % Naik/turunkan tiap elemen via \NameRaise, \LineRaise, \LabelRaise (metadata.tex).
+    \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\ExaminerA}} & \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\ExaminerB}} \\[\LineToNameGap]
+    \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\ExaminerALine}{0.4pt}}} & \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\ExaminerBLine}{0.4pt}}} \\[\LineToLabelGap]
+    \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Anggota}} & \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Anggota}} \\[1.2cm]
+\end{tabular}
 
-\begin{tabular*}{0.86\textwidth}{@{\extracolsep{\fill}}cc@{}}
+\begin{tabular}{@{}c@{\hspace{\SignatureColumnGap}}c@{}}
     % "Mengetahui" ditempatkan di kolom kiri (di atas Dekan) sesuai contoh
     % Lampiran 12 panduan UDINUS, bukan di tengah halaman.
-    \makebox[5.5cm][c]{Mengetahui} & \\[1.4cm]
-    \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} & \makebox[5.5cm][c]{\rule{5.5cm}{0.4pt}} \\
-    \makebox[5.5cm][c]{\DeanName} & \makebox[5.5cm][c]{\ChiefExaminer} \\
-    \makebox[5.5cm][c]{Dekan} & \makebox[5.5cm][c]{Ketua Penguji} \\
-\end{tabular*}
+    \makebox[\SignatureColWidth][c]{Mengetahui} & \makebox[\SignatureColWidth][c]{} \\[1.8cm]
+    \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\DeanName}} & \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\ChiefExaminer}} \\[\LineToNameGap]
+    \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\DeanLine}{0.4pt}}} & \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\ChiefExaminerLine}{0.4pt}}} \\[\LineToLabelGap]
+    \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Dekan}} & \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Ketua Penguji}} \\
+\end{tabular}
 \end{center}
 \clearpage

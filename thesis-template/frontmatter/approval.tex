@@ -17,11 +17,12 @@ NIM   & : & \StudentID \\
 Tesis ini telah diperiksa dan disetujui,\\
 {\ApprovalPlace},\quad\ApprovalDate\\[2.5cm]
 
-\begin{tabular}{p{5.5cm} p{1cm} p{5.5cm}}
-    \multicolumn{1}{c}{\rule{5.5cm}{0.4pt}} & &
-    \multicolumn{1}{c}{\rule{5.5cm}{0.4pt}} \\
-    \multicolumn{1}{c}{\SupervisorA} & & \multicolumn{1}{c}{\SupervisorB} \\
-    \multicolumn{1}{c}{Pembimbing Utama} & & \multicolumn{1}{c}{Pembimbing Pembantu} \\
+\begin{tabular}{@{}c@{\hspace{\SignatureColumnGap}}c@{}}
+    % Struktur: nama → garis → keterangan (sama seperti approval_pengesahan.tex).
+    % Kontrol vertikal & lebar garis di metadata.tex.
+    \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\SupervisorA}} & \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\SupervisorB}} \\[\LineToNameGap]
+    \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\SupervisorALine}{0.4pt}}} & \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\SupervisorBLine}{0.4pt}}} \\[\LineToLabelGap]
+    \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Pembimbing Utama}} & \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Pembimbing Pembantu}} \\
 \end{tabular}
 \end{center}
 \clearpage

@@ -33,7 +33,10 @@ tersebut''.
 \fbox{\rule{0pt}{1.6cm}\rule{1.5cm}{0pt}}\\[-0.05cm]
 meterai\\[0.75cm]
 
-\underline{\AuthorNameTitleCase}\\
-Penulis
+% Nama penulis → garis → label "Penulis".
+% Kontrol vertikal & lebar garis di metadata.tex (seragam dengan pengesahan).
+\raisebox{\NameRaise}{\AuthorNameTitleCase}\\[\LineToNameGap]
+\raisebox{\LineRaise}{\rule{\AuthorLine}{0.4pt}}\\[\LineToLabelGap]
+\raisebox{\LabelRaise}{Penulis}
 \end{center}
 \clearpage
