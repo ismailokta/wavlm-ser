@@ -66,9 +66,10 @@
 % Jarak antar kolom kiri ↔ kanan (Anggota 1 ↔ Anggota 2, Dekan ↔ Ketua Penguji).
 \newcommand{\SignatureColumnGap}{2cm}
 
-% Lebar kolom dihitung otomatis: (textwidth - gap) / 2.
-% Total = textwidth → kedua kolom SELALU simetris terhadap bidang tulis,
-% berapapun nilai \SignatureColumnGap. TIDAK perlu diubah manual.
+% Lebar kolom untuk halaman yang butuh paragraf/multi-line (mis. approval_status).
+% Halaman tanda tangan lainnya (pengesahan, persetujuan) pakai kolom auto-fit
+% ke isi nama — tidak perlu parameter ini. Block keseluruhan di-center
+% oleh environment `center` di masing-masing halaman.
 \newcommand{\SignatureColWidth}{\dimexpr(\textwidth-\SignatureColumnGap)/2\relax}
 
 % ============================================================================

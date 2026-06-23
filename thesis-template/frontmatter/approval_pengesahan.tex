@@ -24,23 +24,17 @@ memadai dari segi kualitas untuk tujuan penganugerahan gelar
 
 Dewan Penguji:\\[2.0cm]
 
+% Satu tabular untuk seluruh Dewan Penguji → kolom kiri & kanan konsisten posisinya.
+% Baris kosong pada kolom kanan di baris "Mengetahui" cukup biarkan (&).
+% Environment `center` di atas menengahkan seluruh block di textwidth.
 \begin{tabular}{@{}c@{\hspace{\SignatureColumnGap}}c@{}}
-    % Lebar kolom (\SignatureColWidth) sama untuk kiri & kanan → simetris.
-    % Lebar garis (\ExaminerALine, dll) bisa beda, tetap centered di kolom.
-    % Jarak antar kolom diatur oleh \SignatureColumnGap (metadata.tex).
-    % Naik/turunkan tiap elemen via \NameRaise, \LineRaise, \LabelRaise (metadata.tex).
-    \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\ExaminerA}} & \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\ExaminerB}} \\[\LineToNameGap]
-    \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\ExaminerALine}{0.4pt}}} & \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\ExaminerBLine}{0.4pt}}} \\[\LineToLabelGap]
-    \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Anggota}} & \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Anggota}} \\[1.2cm]
-\end{tabular}
-
-\begin{tabular}{@{}c@{\hspace{\SignatureColumnGap}}c@{}}
-    % "Mengetahui" ditempatkan di kolom kiri (di atas Dekan) sesuai contoh
-    % Lampiran 12 panduan UDINUS, bukan di tengah halaman.
-    \makebox[\SignatureColWidth][c]{Mengetahui} & \makebox[\SignatureColWidth][c]{} \\[1.8cm]
-    \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\DeanName}} & \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\ChiefExaminer}} \\[\LineToNameGap]
-    \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\DeanLine}{0.4pt}}} & \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\ChiefExaminerLine}{0.4pt}}} \\[\LineToLabelGap]
-    \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Dekan}} & \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Ketua Penguji}} \\
+    \raisebox{\NameRaise}{\ExaminerA} & \raisebox{\NameRaise}{\ExaminerB} \\[\LineToNameGap]
+    \raisebox{\LineRaise}{\rule{\ExaminerALine}{0.4pt}} & \raisebox{\LineRaise}{\rule{\ExaminerBLine}{0.4pt}} \\[\LineToLabelGap]
+    \raisebox{\LabelRaise}{Anggota} & \raisebox{\LabelRaise}{Anggota} \\[1.2cm]
+    Mengetahui & \\[1.8cm]
+    \raisebox{\NameRaise}{\DeanName} & \raisebox{\NameRaise}{\ChiefExaminer} \\[\LineToNameGap]
+    \raisebox{\LineRaise}{\rule{\DeanLine}{0.4pt}} & \raisebox{\LineRaise}{\rule{\ChiefExaminerLine}{0.4pt}} \\[\LineToLabelGap]
+    \raisebox{\LabelRaise}{Dekan} & \raisebox{\LabelRaise}{Ketua Penguji} \\
 \end{tabular}
 \end{center}
 \clearpage

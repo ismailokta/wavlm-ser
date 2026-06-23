@@ -17,12 +17,12 @@ NIM   & : & \StudentID \\
 Tesis ini telah diperiksa dan disetujui,\\
 {\ApprovalPlace},\ \ApprovalDate\\[2.5cm]
 
+% Kolom auto-fit ke isi (nama/garis/label) — lebar tabular = jumlah kolom + gap.
+% Environment `center` di atas menengahkan seluruh block di textwidth.
 \begin{tabular}{@{}c@{\hspace{\SignatureColumnGap}}c@{}}
-    % Struktur: nama → garis → keterangan (sama seperti approval_pengesahan.tex).
-    % Kontrol vertikal & lebar garis di metadata.tex.
-    \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\SupervisorA}} & \makebox[\SignatureColWidth][c]{\raisebox{\NameRaise}{\SupervisorB}} \\[\LineToNameGap]
-    \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\SupervisorALine}{0.4pt}}} & \makebox[\SignatureColWidth][c]{\raisebox{\LineRaise}{\rule{\SupervisorBLine}{0.4pt}}} \\[\LineToLabelGap]
-    \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Pembimbing Utama}} & \makebox[\SignatureColWidth][c]{\raisebox{\LabelRaise}{Pembimbing Pembantu}} \\
+    \raisebox{\NameRaise}{\SupervisorA} & \raisebox{\NameRaise}{\SupervisorB} \\[\LineToNameGap]
+    \raisebox{\LineRaise}{\rule{\SupervisorALine}{0.4pt}} & \raisebox{\LineRaise}{\rule{\SupervisorBLine}{0.4pt}} \\[\LineToLabelGap]
+    \raisebox{\LabelRaise}{Pembimbing Utama} & \raisebox{\LabelRaise}{Pembimbing Pembantu} \\
 \end{tabular}
 \end{center}
 \clearpage
