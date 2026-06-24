@@ -2,6 +2,7 @@
 % Posisi nomor halaman: tengah bawah (mengikuti praktik umum tesis Indonesia
 % untuk seluruh bagian kepala/awal; eksplisit panduan Udinus untuk ACKNOWLEDGMENTS).
 \thispagestyle{plain}
+\newgeometry{left=4cm,right=2.5cm,top=2.5cm,bottom=3cm}
 \begin{center}
 \addcontentsline{toc}{chapter}{PENGESAHAN STATUS TESIS}
 % Logo di atas
@@ -49,16 +50,16 @@ Saya & : & {\AuthorNameTitleCase} \\
 \fbox{\makebox[0.5cm]{$\surd$}} & Biasa \\
 \end{tabular}
 
-\vspace{1.5cm}
+\vspace{1cm}
 
 \noindent
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{\SignatureColWidth}@{\hspace{\SignatureColumnGap}}p{\SignatureColWidth}@{}}
 % "Disahkan oleh:" di atas kolom kanan (pembimbing), kolom kiri kosong.
- & \multicolumn{1}{c}{Disahkan oleh:} \\[1.5cm]
+ & \multicolumn{1}{c}{Disahkan oleh:} \\[1.7cm]
 % Nama penulis rata kiri (sejajar paragraf/alamat); nama pembimbing rata tengah.
 \raisebox{\NameRaise}{\AuthorNameTitleCase} & \multicolumn{1}{c}{\raisebox{\NameRaise}{\SupervisorA}} \\[\LineToNameGapStatus]
 \raisebox{\LineRaise}{\rule{\AuthorLine}{0.4pt}} & \multicolumn{1}{c}{\raisebox{\LineRaise}{\rule{\SupervisorALine}{0.4pt}}} \\[\LineToLabelGap]
-\vspace{0.5cm}
+\vspace{0.3cm}
 Alamat Tetap: & \\
 Jalan ..., RT/RW, Kelurahan, Kecamatan, Kota & \\[1.5cm]
 Tanggal : \RatificationDate & \multicolumn{1}{c}{Tanggal : \RatificationDate} \\
@@ -66,4 +67,5 @@ Tanggal : \RatificationDate & \multicolumn{1}{c}{Tanggal : \RatificationDate} \\
 
 \endgroup
 
+\restoregeometry
 \clearpage

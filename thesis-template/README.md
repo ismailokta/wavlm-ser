@@ -14,18 +14,18 @@ thesis-template/
 │   ├── formatting.tex      # Format halaman, heading, dll
 │   └── numbering.tex       # Penomoran list
 ├── frontmatter/            # Halaman depan
-│   ├── titlepage.tex       # Halaman sampul
-│   ├── title_inner.tex     # Halaman judul
-│   ├── approval_status.tex # Pengesahan status tesis
-│   ├── statement.tex       # Pernyataan penulis
-│   ├── approval.tex        # Persetujuan tesis
+│   ├── titlepage.tex            # Halaman sampul
+│   ├── title_inner.tex          # Halaman judul
+│   ├── approval_status.tex      # Pengesahan status tesis
+│   ├── statement.tex            # Pernyataan penulis
+│   ├── approval.tex             # Persetujuan tesis
 │   ├── approval_pengesahan.tex  # Pengesahan tesis
-│   ├── abstract_en.tex     # Abstract (English)
-│   ├── abstract_id.tex     # Abstrak (Indonesia)
-│   ├── acknowledgements.tex    # Ucapan terima kasih
-│   ├── daftar_publikasi.tex    # Daftar publikasi
-│   ├── list_of_appendices.tex  # Daftar lampiran
-│   └── list_of_terms.tex   # Daftar istilah
+│   ├── abstract_en.tex          # Abstract (English)
+│   ├── abstract_id.tex          # Abstrak (Indonesia)
+│   ├── acknowledgements.tex     # Ucapan terima kasih
+│   ├── daftar_publikasi.tex     # Daftar publikasi
+│   ├── list_of_appendices.tex   # Daftar lampiran
+│   └── list_of_terms.tex        # Daftar istilah
 ├── chapters/               # Bab-bab tesis
 │   ├── bab1.tex            # Pendahuluan
 │   ├── bab2.tex            # Tinjauan pustaka
@@ -36,8 +36,8 @@ thesis-template/
 │   ├── references.tex      # Bibliography style
 │   └── references.bib      # File BibTeX
 ├── appendices/             # Lampiran
-│   ├── turnitin.tex        # Contoh lampiran turnitin
-│   └── loa_publikasi.tex   # Contoh lampiran LOA publikasi
+│   ├── loa_publikasi.tex   # Letter of acceptance publikasi
+│   └── turnitin.tex        # Contoh lampiran turnitin
 └── assets/                 # Aset (gambar, logo)
     ├── logos/
     │   └── logo_udinus.png
@@ -448,4 +448,5 @@ Template ini dibuat untuk keperluan akademik di Universitas Dian Nuswantoro.
 ## Bantuan
 
 Untuk bantuan lebih lanjut, hubungi:
-- Email: p31202402617@mhs.dinus.ac.id
+- Email: [email departemen]
+- Website: https://fti.dinus.ac.id
